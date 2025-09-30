@@ -1,0 +1,79 @@
+/* ===== Reset & Box Sizing ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Body ===== */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* ===== Header ===== */
+header h1 {
+    font-size: 1.75em; /* 75% bigger than paragraph */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ===== Container ===== */
+.container {
+    width: 100%;
+    overflow: hidden; /* handle floats */
+}
+
+/* ===== Sections - Desktop default (>=992px) ===== */
+.section {
+    float: left;
+    width: 33.33%;
+    border: 1px solid black;
+    padding: 20px;
+    position: relative;
+    background-color: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+/* Individual section colors */
+.chicken { background-color: #ffe0b2; }
+.beef { background-color: #ffccbc; }
+.sushi { background-color: #c8e6c9; }
+
+/* Section titles */
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffab91;
+    border: 1px solid black;
+    padding: 5px 10px;
+    font-size: 1.25em; /* 25% larger than paragraph */
+}
+
+/* Paragraph spacing */
+.section p {
+    margin-top: 50px; /* so text doesn't overlap title */
+}
+
+/* ===== Tablet view (768px - 991px) ===== */
+@media (max-width: 991px) and (min-width: 768px) {
+    .section {
+        float: left;
+        width: 48%; /* first 2 sections side by side */
+        margin-bottom: 20px;
+    }
+
+    .section:nth-child(3) {
+        width: 100%; /* third section full row */
+    }
+}
+
+/* ===== Mobile view (<= 767px) ===== */
+@media (max-width: 767px) {
+    .section {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
